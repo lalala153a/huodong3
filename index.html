@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>足球闯关游戏</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page-shell">
+  <div class="arena-layout">
+    <div class="card">
+      <div class="board-frame">
+        <div class="board" id="board">
+          <div class="path-overlay">
+            <polyline id="pathLineShadow" class="path-line path-line--shadow"></polyline>
+            <polyline id="pathLine" class="path-line"></polyline>
+          </div>
+          <div class="ball" id="ball">
+            <div class="ball__sprite">
+              <img src="images/ball.png" alt="足球">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>方向控制</h2>
+        </div>
+      </div>
+      <div class="controls-grid" id="controlsGrid"></div>
+      <div class="stats-grid">
+        <div class="counter-card">
+          <span class="counter-card__label">步数</span>
+          <div class="counter-card__value" id="stepCount">0</div>
+        </div>
+      </div>
+      <button class="reset-button" id="resetButton">重新开始</button>
+      <div class="status-box" id="statusText"></div>
+      <div class="log-shell">
+        <div class="move-log" id="moveLog"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
